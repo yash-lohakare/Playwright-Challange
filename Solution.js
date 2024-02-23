@@ -1,6 +1,7 @@
 const playwright = require('@playwright');
+const {test, expect} = require('@playwright/test')
 
-(async () => {
+test('Demo',async () => {
   const browser = await playwright.chromium.launch();
   const context = await browser.newContext();
   const page = await context.newPage();
